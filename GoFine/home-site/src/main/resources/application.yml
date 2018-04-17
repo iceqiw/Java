@@ -1,0 +1,22 @@
+server:
+  port: @port@
+  servlet:
+    context-path: /api/tech
+
+spring:
+  redis:
+    host: @redis.host@
+    port: @redis.port@
+  data:
+    elasticsearch:
+      cluster-name: elasticsearch
+      cluster-nodes: hadoop-3:9300
+
+
+sys:
+  name: mage
+  description: test
+  version: 1.0
+  apipath : com.ice.tech.gh.homesite.app.controller
+  auth:
+    url: /**

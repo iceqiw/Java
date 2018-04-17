@@ -1,0 +1,17 @@
+server:
+  port: 8086
+  servlet:
+    context-path: /api/ai
+
+spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+
+sys:
+  name: mage
+  description: test
+  version: 1.0
+  apipath : com.ice.tech.gh.aisite.app.controller
+  auth:
+    url: /**

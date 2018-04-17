@@ -1,0 +1,40 @@
+buildscript {
+	ext {
+		springBootVersion = '2.0.0.RELEASE'
+	}
+	repositories {
+		mavenLocal()
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'scala'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.ice.tech.gh'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+
+}
+
+
+dependencies {
+	compile('com.winche.framework:framework-core:0.0.1-SNAPSHOT')
+	compileOnly('org.projectlombok:lombok')
+	compile "org.scala-lang:scala-compiler:2.12.2"
+	compile "org.scala-lang:scala-reflect:2.12.2"
+	compile 'org.scala-lang:scala-library:2.12.2'
+	compile 'com.sksamuel.elastic4s:elastic4s-core_2.12:5.4.2'
+	compile 'com.sksamuel.elastic4s:elastic4s-http_2.12:5.4.2'
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+}

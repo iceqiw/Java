@@ -1,0 +1,21 @@
+server:
+  port: @port@
+  context-path: /sms
+
+spring:
+  redis:
+    host: @redis.host@
+    port: @redis.port@
+  application:
+    name: sms-service
+  dubbo:
+    server: true
+    registry: multicast://224.0.0.0:1111
+
+sys:
+  name: mage
+  description: test
+  version: 1.0
+  apipath :
+  auth:
+    url:
