@@ -1,6 +1,6 @@
 target/
-java/
 gradle/
+java_code/
 out/
 .settings/
 ### IntelliJ IDEA ###
