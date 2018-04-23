@@ -1,0 +1,24 @@
+version: '3'
+services:
+  gateway:
+    image: cloud/gateway
+    networks:
+      - springcloud-overlay
+    environment:
+      - EUREKA_SERVER_ADDRESS=eureka
+      - CONF_SERVER_ADDRESS=configserver
+    ports:
+      - "8099:8099"
+
+  homeserver:
+    image: cloud/homeserver
+    networks:
+      - springcloud-overlay
+    environment:
+      - EUREKA_SERVER_ADDRESS=eureka
+      - CONF_SERVER_ADDRESS=configserver
+
+networks:
+  springcloud-overlay:
+    external:
+      name: springcloud-overlay

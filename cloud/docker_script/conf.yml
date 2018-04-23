@@ -1,0 +1,17 @@
+version: '3'
+services:
+  confserver:
+    image: cloud/confserver
+    environment:
+      - EUREKA_SERVER_ADDRESS=eureka
+    ports:
+      - "8888"
+    networks:
+      springcloud-overlay:
+        aliases:
+          - configserver
+networks:
+  springcloud-overlay:
+    external:
+      name: springcloud-overlay
+
