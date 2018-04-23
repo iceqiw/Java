@@ -18,6 +18,14 @@ services:
       - EUREKA_SERVER_ADDRESS=eureka
       - CONF_SERVER_ADDRESS=configserver
 
+  helloserver:
+    image: cloud/helloserver
+    networks:
+      - springcloud-overlay
+    environment:
+      - EUREKA_SERVER_ADDRESS=eureka
+      - CONF_SERVER_ADDRESS=configserver
+
 networks:
   springcloud-overlay:
     external:
