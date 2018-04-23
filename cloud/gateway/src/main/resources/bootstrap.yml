@@ -9,3 +9,8 @@ spring:
       uri: http://${CONF_SERVER_ADDRESS}:8888
       profile: dev
       label: master
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${EUREKA_SERVER_ADDRESS}:8761/eureka
