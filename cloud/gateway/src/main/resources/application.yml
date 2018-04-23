@@ -4,11 +4,6 @@ server:
 spring:
   application:
     name: gateway
-  cloud:
-    config:
-      uri: http://${CONF_SERVER_ADDRESS}:8888
-      profile: dev
-      label: master
 
 eureka:
   client:
