@@ -1,6 +1,5 @@
 package com.gofine.home.common.model;
 
-
 import java.util.Date;
 import lombok.Data;
 
@@ -20,6 +19,4 @@ public class Demo {
   private Date last_modify_time;
 
   private long modify_timestamp;
-
-
 }
